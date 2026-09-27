@@ -1,0 +1,34 @@
+{
+  "nq": {
+    "dataset": "nq",
+    "source_kind": "BEIR_NQ_raw_passage_corpus",
+    "corpus_path": "/home/amax/anquan/results/phase3c_infra_data_readiness/data/beir_nq/nq/corpus.jsonl",
+    "chunks_path": "/home/amax/anquan/results/phase3b_nq_passage_rerun_seed42/data/chunks_c128_s32_title_text.jsonl.gz",
+    "chunk_manifest_path": "/home/amax/anquan/results/phase3b_nq_passage_rerun_seed42/data/chunk_manifest_phase3b_strict.json",
+    "clean_chunks": 2886727,
+    "chunking": "C128-S32",
+    "chunk_size": 128,
+    "stride": 32,
+    "min_chunk_length": 20,
+    "title_included": true,
+    "qa_as_document_fallback_used": false,
+    "synthetic_support_passages": false,
+    "sha256": "08fea65c7873cd2ed58987aca1ea4a9ac2711ad49374a1dce98bc17cba88cfb6"
+  },
+  "hotpotqa": {
+    "dataset": "hotpotqa",
+    "source_kind": "HotpotQA_local_raw_context_paragraphs",
+    "corpus_path": "/home/amax/anquan/results/phase5_main_matrix/data/hotpotqa/corpus.jsonl",
+    "chunks_path": "/home/amax/anquan/results/phase5_main_matrix/data/hotpotqa/chunks_c128_s32_title_text.jsonl.gz",
+    "chunk_manifest_path": "/home/amax/anquan/results/phase5_main_matrix/data/hotpotqa/chunk_manifest.json",
+    "clean_chunks": 29930,
+    "chunking": "C128-S32",
+    "chunk_size": 128,
+    "stride": 32,
+    "min_chunk_length": 20,
+    "title_included": true,
+    "qa_as_document_fallback_used": false,
+    "synthetic_support_passages": false,
+    "sha256": "6deb7d12afead670e0980f7afcd6eab43f5bfee9637688676858fd804c9882bc"
+  }
+}

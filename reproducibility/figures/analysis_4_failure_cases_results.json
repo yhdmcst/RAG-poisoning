@@ -1,0 +1,110 @@
+{
+  "section": "5.6",
+  "table": "失败案例表（随文）",
+  "total_cases": 80,
+  "error_type_distribution": [
+    {
+      "error_type": "evaluation_normalization_issue",
+      "label": "评测/归一化口径",
+      "n": 56,
+      "share": 0.7,
+      "writing_note": "答案语义正确但归一化 F1 未满分，低估效用"
+    },
+    {
+      "error_type": "retrieval_miss",
+      "label": "检索未命中",
+      "n": 10,
+      "share": 0.125,
+      "writing_note": "top-50 无 qrel 证据，非门控引起"
+    },
+    {
+      "error_type": "rerank_or_context_miss",
+      "label": "重排/上下文丢失",
+      "n": 9,
+      "share": 0.1125,
+      "writing_note": "检索到证据但重排 top-5 未保留"
+    },
+    {
+      "error_type": "generation_error_or_truncation",
+      "label": "生成错误/截断",
+      "n": 4,
+      "share": 0.05,
+      "writing_note": "证据在上下文但生成未给出正确答案"
+    },
+    {
+      "error_type": "uncertain",
+      "label": "不确定",
+      "n": 1,
+      "share": 0.0125,
+      "writing_note": "非终止式结尾/中等长度，难以归因"
+    }
+  ],
+  "representative_cases": [
+    {
+      "error_type": "evaluation_normalization_issue",
+      "label": "评测/归一化口径",
+      "dataset": "nq",
+      "retriever": "bm25",
+      "query_id": "test1",
+      "question": "how many episodes are in chicago fire season 4",
+      "gold_answer": "23",
+      "generated_answer": "The answer is 23 episodes.",
+      "normalized_f1": 0.4,
+      "error_reason": "non-exact generated answer retains normalized token overlap"
+    },
+    {
+      "error_type": "retrieval_miss",
+      "label": "检索未命中",
+      "dataset": "nq",
+      "retriever": "bm25",
+      "query_id": "test1004",
+      "question": "how many books are in the one piece series",
+      "gold_answer": "83 || more than 80",
+      "generated_answer": "I don't know.",
+      "normalized_f1": 0.0,
+      "error_reason": "no qrel document in retrieval top-50"
+    },
+    {
+      "error_type": "rerank_or_context_miss",
+      "label": "重排/上下文丢失",
+      "dataset": "nq",
+      "retriever": "bm25",
+      "query_id": "test1149",
+      "question": "chemicals produced in one part of a plant that affect the growth and response of other par",
+      "gold_answer": "Plant hormones || hormones",
+      "generated_answer": "The answer is: hormones.",
+      "normalized_f1": 0.5,
+      "error_reason": "retrieved qrel evidence not retained in reranker top-5"
+    },
+    {
+      "error_type": "generation_error_or_truncation",
+      "label": "生成错误/截断",
+      "dataset": "hotpotqa",
+      "retriever": "bm25",
+      "query_id": "5a70f2795542994082a3e41b",
+      "question": "Who managed the 5,000 acre estate of Thomas Jefferson?",
+      "gold_answer": "Edmund Bacon",
+      "generated_answer": "I don't know.",
+      "normalized_f1": 0.0,
+      "error_reason": "evidence retained but answer has zero normalized token F1"
+    },
+    {
+      "error_type": "uncertain",
+      "label": "不确定",
+      "dataset": "nq",
+      "retriever": "bm25",
+      "query_id": "test1062",
+      "question": "when does boomer find out she a cylon",
+      "gold_answer": "Kobol's Last Gleaming",
+      "generated_answer": "Boomer finds out she is a Cylon after the events of the first season, specifical",
+      "normalized_f1": 0.0,
+      "error_reason": "non-terminal ending at moderate length"
+    }
+  ],
+  "diagnosis": {
+    "implementation_bug_cases": 0,
+    "dominant_cause": "evaluation_normalization_issue",
+    "dominant_share": 0.7,
+    "finding": "80 例 Clean F1 诊断未发现实现 bug；主因为评测/归一化口径（56 例）、检索/重排未命中、生成截断。支撑'Clean F1 绝对值偏低仅作协议内相对效用比较'的限制。"
+  }
+}

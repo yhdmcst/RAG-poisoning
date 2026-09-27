@@ -1,0 +1,49 @@
+phase: Phase 5 formal main matrix
+datasets:
+- nq
+- hotpotqa
+retrievers:
+- bm25
+- bge_dense
+seeds:
+- 13
+- 42
+- 2026
+split_seed: 20260905
+calibration_queries: 200
+eval_queries: 300
+chunking: C128-S32
+chunk_size: 128
+stride: 32
+min_chunk_length: 20
+top_m: 50
+K_gen: 5
+reranker: BAAI/bge-reranker-base
+reranker_enabled: true
+generator: Qwen/Qwen3-8B
+generator_revision: master
+decoding:
+  temperature: 0
+  do_sample: false
+  top_p: 1.0
+  max_new_tokens: 64
+attack: targeted_template_poison
+poison_budget: 5
+gate_name: SafeGate
+gate_version: phase4_v1
+gate_positions:
+- P_ret
+- P_gen
+gate_signals:
+- query_similarity_anomaly
+- query_overlap_anomaly
+- corpus_distance_anomaly
+- surface_repetition_anomaly
+gate_fusion: unweighted_mean_relu_zscores
+alpha_down: 0.1
+alpha_block: 0.05
+gate_encoder: BAAI/bge-base-en-v1.5
+bm25:
+  k1: 0.9
+  b: 0.4
+  tokenizer: lowercase alnum regex with fixed stopword removal

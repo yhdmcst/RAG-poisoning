@@ -1,0 +1,55 @@
+scope: frozen_result_statistical_reproduction
+datasets:
+  - nq
+  - hotpotqa
+retrievers:
+  - bm25
+  - bge_dense
+attack_seeds:
+  - 13
+  - 42
+  - 2026
+split_seed: 20260905
+calibration_queries: 200
+evaluation_queries: 300
+chunking:
+  name: C128-S32
+  chunk_size: 128
+  stride: 32
+  minimum_chunk_length: 20
+  title_included: true
+retrieval:
+  top_m: 50
+  bm25:
+    k1: 0.9
+    b: 0.4
+    implementation: in_repository_fixed_implementation
+  dense_retriever: BAAI/bge-base-en-v1.5
+reranker:
+  model: BAAI/bge-reranker-base
+  enabled_in_main_matrix: true
+generator:
+  model: Qwen3-8B
+  temperature: 0
+  do_sample: false
+  top_p: 1.0
+  max_new_tokens: 64
+attack:
+  name: targeted_template_poison
+  poison_chunks_per_query: 5
+gate:
+  name: SafeGate
+  positions:
+    - P_ret
+    - P_gen
+  alpha_block: 0.05
+  alpha_down: 0.10
+  threshold_source: clean_calibration_candidates_only
+  signals:
+    - query_similarity_anomaly
+    - query_overlap_anomaly
+    - corpus_distance_anomaly
+    - surface_repetition_anomaly
+main_matrix_runs: 72
+control_and_ablation_runs: 120
+latency_comparable: false

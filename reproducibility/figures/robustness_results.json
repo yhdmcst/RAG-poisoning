@@ -1,0 +1,102 @@
+{
+  "section": "4.2 稳健性/统计口径",
+  "resamples": 2000,
+  "ci_type": "descriptive paired-bootstrap CI (not statistical significance)",
+  "by_comparison_metric": [
+    {
+      "comparison": "P_ret_minus_P_gen",
+      "metric": "FPR",
+      "n_blocks": 12,
+      "n_cross_zero": 0,
+      "n_exclude_zero": 12
+    },
+    {
+      "comparison": "P_ret_minus_P_gen",
+      "metric": "TPR",
+      "n_blocks": 12,
+      "n_cross_zero": 6,
+      "n_exclude_zero": 6
+    },
+    {
+      "comparison": "P_ret_minus_P_gen",
+      "metric": "asr_drop",
+      "n_blocks": 12,
+      "n_cross_zero": 12,
+      "n_exclude_zero": 0
+    },
+    {
+      "comparison": "P_ret_minus_P_gen",
+      "metric": "utility_drop",
+      "n_blocks": 12,
+      "n_cross_zero": 12,
+      "n_exclude_zero": 0
+    },
+    {
+      "comparison": "multi_signal_minus_random_matched_block",
+      "metric": "asr_drop",
+      "n_blocks": 24,
+      "n_cross_zero": 7,
+      "n_exclude_zero": 17
+    },
+    {
+      "comparison": "multi_signal_minus_random_matched_block",
+      "metric": "utility_drop",
+      "n_blocks": 24,
+      "n_cross_zero": 4,
+      "n_exclude_zero": 20
+    },
+    {
+      "comparison": "multi_signal_minus_single_signal",
+      "metric": "asr_drop",
+      "n_blocks": 24,
+      "n_cross_zero": 8,
+      "n_exclude_zero": 16
+    },
+    {
+      "comparison": "multi_signal_minus_single_signal",
+      "metric": "utility_drop",
+      "n_blocks": 24,
+      "n_cross_zero": 24,
+      "n_exclude_zero": 0
+    },
+    {
+      "comparison": "simplified_minus_multistage_no_gate_ASR",
+      "metric": "ASR_difference",
+      "n_blocks": 12,
+      "n_cross_zero": 3,
+      "n_exclude_zero": 9
+    }
+  ],
+  "key_checks": {
+    "simplified_minus_multistage_ASR": {
+      "comparison": "simplified_minus_multistage_no_gate_ASR",
+      "metric": "ASR_difference",
+      "n_blocks": 12,
+      "n_cross_zero": 3,
+      "n_exclude_zero": 9
+    },
+    "multi_minus_single_asr_drop": {
+      "comparison": "multi_signal_minus_single_signal",
+      "metric": "asr_drop",
+      "n_blocks": 24,
+      "n_cross_zero": 8,
+      "n_exclude_zero": 16
+    },
+    "multi_minus_random_asr_drop": {
+      "comparison": "multi_signal_minus_random_matched_block",
+      "metric": "asr_drop",
+      "n_blocks": 24,
+      "n_cross_zero": 7,
+      "n_exclude_zero": 17
+    },
+    "Pret_minus_Pgen_asr_drop": {
+      "comparison": "P_ret_minus_P_gen",
+      "metric": "asr_drop",
+      "n_blocks": 12,
+      "n_cross_zero": 12,
+      "n_exclude_zero": 0
+    }
+  },
+  "power_note": "每个 dataset×retriever×seed 仅 3 攻击种子，配对 CI 功效有限；P_ret−P_gen 的 ASR-Drop 区间跨零应解释为'实现条件下收敛或功效不足'，而非'位置无差异'的强结论。",
+  "seedwise_rows": 896
+}

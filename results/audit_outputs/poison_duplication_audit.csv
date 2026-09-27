@@ -1,0 +1,7 @@
+﻿dataset,attack_seed,poison_chunks,queries,queries_with_five_chunks,queries_with_five_identical_text_copies,identical_copy_rate
+nq,13,1500,300,300,300,1
+nq,42,1500,300,300,300,1
+nq,2026,1500,300,300,300,1
+hotpotqa,13,1500,300,300,300,1
+hotpotqa,42,1500,300,300,300,1
+hotpotqa,2026,1500,300,300,300,1

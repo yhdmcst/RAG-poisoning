@@ -1,0 +1,50 @@
+{
+  "audit_date": "2026-09-10",
+  "main": {
+    "expected_runs": 72,
+    "actual_runs": 72,
+    "missing_file_runs": 0,
+    "duplicate_query_id_runs": 0,
+    "metric_mismatches": 0
+  },
+  "control": {
+    "expected_runs": 120,
+    "actual_runs": 120,
+    "missing_file_runs": 0,
+    "duplicate_query_id_runs": 0,
+    "metric_mismatches": 0
+  },
+  "position_pair_count": 24,
+  "position_pairs_with_identical_answers": 24,
+  "position_pairs_with_identical_primary_outcomes": 24,
+  "clean_duplicate_groups": 12,
+  "clean_duplicate_groups_fully_identical": 12,
+  "mean_p_gen_input_ratio_vs_p_ret": 0.1442611111111111,
+  "mean_shared_decision_agreement_rate": 1,
+  "one_token_target_rate": 0.29,
+  "mean_clean_counterfactual_asr": 0.0008333333333333334,
+  "poison_query_identical_copy_rate": 1,
+  "provenance": {
+    "git_directory_exists": true,
+    "git_directory_file_count": 0,
+    "manifest_absolute_linux_path_occurrences": 4285,
+    "formal_run_script_hash_present_in_existing_manifests": false,
+    "formal_run_git_commit_present_in_existing_manifests": false,
+    "script_hashes_generated_by_this_audit": {
+      "scripts/audit_phase5_results.mjs": "c31dc33a94a3de4e24f20a709c328e4328fc630661e6f453cce2f795242690e8",
+      "scripts/audit_phase5_results.py": "3699fa8affac6d27266328aa50ff312b6bc470c3599a5bf43402e8a059b6c214",
+      "scripts/download_one_model_modelscope.py": "7752469fb3108ee9e23750c5ac1c6d4d9717c0120e40493c8aa459b34eeefaa2",
+      "scripts/download_required_models.py": "790d6972c73efe9a9614004b9a158d9ea96f902e482d61199cbd8e540fb7603b",
+      "scripts/download_required_models_modelscope.py": "2c219b91b8cdabadb89312002ef6022e49bf7f3d3b693779f668e3afdd6f2c66",
+      "scripts/phase3_minipilot.py": "d4e1f8904305492836e41816308659e7d353d5b099c31afd6f02d78a25bd9231",
+      "scripts/phase3c_readiness.py": "89abcb514a4205a317c34043590608bdf2ff16460dcaea89f35b006045523182",
+      "scripts/run_phase3_minipilot.py": "b8746495c46c576507605b9c1e9088dd83c8a4cb356dbabb289ce37de360a003",
+      "scripts/run_phase3b_beir_nq_rerun.py": "bd6a1c7023df867bef897317fb411bd82dbbd1ad25b17d4c4493b8a4cf21331e",
+      "scripts/run_phase5_main_matrix.py": "84be4c07e6611f59350ef6cfdccf3b01ee30b8cb0c66628e06ca3bd3ddf8f300",
+      "scripts/run_phase5_main_warmup.py": "3e848ef451286ad5e06bfed5638c094b6b630c6f0810d0fb811ac26a47db701d",
+      "scripts/run_phase5_qwen3_compatibility.py": "91b9d7e8bc2608cf6c720cbfc098404c81c73cd16bc1454441451a4ff3d2c980",
+      "scripts/run_phase5d_control_ablation.py": "b09c80f355bc5cae424d0b1e9e35504c36afa51ddb25e4cdac649a194d0dbf4d",
+      "scripts/verify_local_models.py": "4b173273ef4ce13a6971e145d8c8a2c2e26a885cddda709c2eb4d9e1e21b2d34"
+    }
+  }
+}

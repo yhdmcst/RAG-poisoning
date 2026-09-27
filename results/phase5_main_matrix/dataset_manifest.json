@@ -1,0 +1,106 @@
+{
+  "nq": {
+    "dataset": "nq",
+    "label": "Natural Questions / BEIR NQ raw passage corpus",
+    "status": "READY",
+    "source": {
+      "name": "BEIR NQ",
+      "url": "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/nq.zip",
+      "format": "BEIR corpus.jsonl / queries.jsonl / qrels",
+      "raw_passage_or_document_corpus": true
+    },
+    "files": {
+      "corpus": "/home/amax/anquan/results/phase3c_infra_data_readiness/data/beir_nq/nq/corpus.jsonl",
+      "queries": "/home/amax/anquan/results/phase3c_infra_data_readiness/data/beir_nq/nq/queries.jsonl",
+      "qrels": "/home/amax/anquan/results/phase3c_infra_data_readiness/data/beir_nq/nq/qrels/test.tsv",
+      "split": "/home/amax/anquan/results/phase5_main_matrix/data/nq/splits_seed20260905_main_200_300.json"
+    },
+    "file_stats": {
+      "corpus": {
+        "bytes": 1503763328,
+        "sha256": "f7e3588dd416772c9830baf67e827d49678f8d5a6ccf6e101b9ce990cc7b208c"
+      },
+      "queries": {
+        "bytes": 330995,
+        "sha256": "72f08f0cd333a47e393dac61cf1e56d4fb41eabf1d6ad5ca99f40250b0b491c8"
+      },
+      "qrels": {
+        "bytes": 87138,
+        "sha256": "6df0cd2cbbe88504b64c68f21e946a759b62c4d864225720cec256f0196e2210"
+      },
+      "chunks_c128_s32": {
+        "bytes": 525318745,
+        "sha256": "59a6a07d087356e3b1f2d72e93af34410d0a917ea5623b266c3cf86c5a2557ea"
+      }
+    },
+    "counts": {
+      "corpus_documents": 2681468,
+      "queries": 3452,
+      "qrels_rows": 4201
+    },
+    "calibration_queries": 200,
+    "eval_queries": 300,
+    "qa_as_document_fallback_used": false,
+    "split_overlap": []
+  },
+  "hotpotqa": {
+    "dataset": "hotpotqa",
+    "label": "HotpotQA local raw context corpus",
+    "status": "READY",
+    "source": {
+      "name": "HotpotQA local JSONL context files",
+      "path": "/data/zyq/AMOR_Agent/data/hotpotqa",
+      "format": "one JSON object per line; context paragraphs used as corpus",
+      "raw_passage_or_document_corpus": true
+    },
+    "files": {
+      "source_dir": "/data/zyq/AMOR_Agent/data/hotpotqa",
+      "corpus": "/home/amax/anquan/results/phase5_main_matrix/data/hotpotqa/corpus.jsonl",
+      "queries": "/home/amax/anquan/results/phase5_main_matrix/data/hotpotqa/queries.jsonl",
+      "qrels": "/home/amax/anquan/results/phase5_main_matrix/data/hotpotqa/qrels.tsv",
+      "split": "/home/amax/anquan/results/phase5_main_matrix/data/hotpotqa/splits_seed20260905_main_200_300.json"
+    },
+    "file_stats": {
+      "source": {
+        "/data/zyq/AMOR_Agent/data/hotpotqa/dev.json": {
+          "bytes": 859940,
+          "sha256": "96296f21ea67a6e7b18017f657f7c1181e3aebdbd337993500f3280a1c4d7c28"
+        },
+        "/data/zyq/AMOR_Agent/data/hotpotqa/test.json": {
+          "bytes": 3145373,
+          "sha256": "d2d566c667d789508aa3511d89cfcc3480fc9d62e556a09331be9376be42c075"
+        },
+        "/data/zyq/AMOR_Agent/data/hotpotqa/train.json": {
+          "bytes": 16786790,
+          "sha256": "bd11b4f3cbe4e2d42908cc1db067b94a1895216f989611a9c998dd96a87036a8"
+        }
+      },
+      "corpus": {
+        "bytes": 16642176,
+        "sha256": "ffd86462c3f6de1b4619933f55e74e0238537f4ad0f0defc4ad1f76cb7197579"
+      },
+      "queries": {
+        "bytes": 661974,
+        "sha256": "2c08f186c19b41eea5d8c4303b98bb7aec2506842b7352da8e8ee371befbace5"
+      },
+      "qrels": {
+        "bytes": 214630,
+        "sha256": "b4dd78eb7e52c76056528c3a98d641915ab38b4730ea29d5079fc9dbfa062bd8"
+      },
+      "chunks": {
+        "bytes": 6089177,
+        "sha256": "6deb7d12afead670e0980f7afcd6eab43f5bfee9637688676858fd804c9882bc"
+      }
+    },
+    "counts": {
+      "corpus_documents": 24908,
+      "queries": 2520,
+      "qrels_rows": 4769,
+      "chunks": 29930
+    },
+    "calibration_queries": 200,
+    "eval_queries": 300,
+    "qa_as_document_fallback_used": false,
+    "split_overlap": []
+  }
+}

@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+~$*
+
+# Local secrets and configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Models, datasets, caches, and large generated artifacts
+models/
+data/raw/
+cache/
+**/cache/
+**/modelscope_cache/
+**/hf_cache/
+**/hf_home/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.faiss
+*.jsonl.gz
+*.zip.part
+
+# Full inference outputs are intentionally excluded from the public repository
+results/**/runs/
+results/**/data/
+results/**/cache/
+results/**/logs/
+

@@ -1,0 +1,171 @@
+{
+  "section": "5.1",
+  "figure": "fig_pipeline_asr (图2)",
+  "table": "表2",
+  "by_combo": [
+    {
+      "dataset": "hotpotqa",
+      "retriever": "bge_dense",
+      "seeds": [
+        13,
+        42,
+        2026
+      ],
+      "simplified_ASR": [
+        0.49,
+        0.496667,
+        0.476667
+      ],
+      "multistage_ASR": [
+        0.456667,
+        0.46,
+        0.48
+      ],
+      "diff_ASR": [
+        0.033333,
+        0.036667,
+        -0.003333
+      ],
+      "diff_ASR_mean": 0.022222,
+      "diff_ASR_std": 0.022194,
+      "simplified_ASR_mean": 0.487778,
+      "multistage_ASR_mean": 0.465556,
+      "clean_f1_simplified_mean": 0.129525,
+      "clean_f1_multistage_mean": 0.13988,
+      "clean_f1_diff_mean": -0.010355,
+      "ci_crosses_zero_per_seed": [
+        true,
+        true,
+        true
+      ],
+      "n_seeds_ci_crosses_zero": 3
+    },
+    {
+      "dataset": "hotpotqa",
+      "retriever": "bm25",
+      "seeds": [
+        13,
+        42,
+        2026
+      ],
+      "simplified_ASR": [
+        0.63,
+        0.623333,
+        0.623333
+      ],
+      "multistage_ASR": [
+        0.466667,
+        0.463333,
+        0.48
+      ],
+      "diff_ASR": [
+        0.163333,
+        0.16,
+        0.143333
+      ],
+      "diff_ASR_mean": 0.155556,
+      "diff_ASR_std": 0.010715,
+      "simplified_ASR_mean": 0.625556,
+      "multistage_ASR_mean": 0.47,
+      "clean_f1_simplified_mean": 0.107062,
+      "clean_f1_multistage_mean": 0.14602,
+      "clean_f1_diff_mean": -0.038959,
+      "ci_crosses_zero_per_seed": [
+        false,
+        false,
+        false
+      ],
+      "n_seeds_ci_crosses_zero": 0
+    },
+    {
+      "dataset": "nq",
+      "retriever": "bge_dense",
+      "seeds": [
+        13,
+        42,
+        2026
+      ],
+      "simplified_ASR": [
+        0.376667,
+        0.43,
+        0.413333
+      ],
+      "multistage_ASR": [
+        0.266667,
+        0.316667,
+        0.303333
+      ],
+      "diff_ASR": [
+        0.11,
+        0.113333,
+        0.11
+      ],
+      "diff_ASR_mean": 0.111111,
+      "diff_ASR_std": 0.001925,
+      "simplified_ASR_mean": 0.406667,
+      "multistage_ASR_mean": 0.295556,
+      "clean_f1_simplified_mean": 0.166627,
+      "clean_f1_multistage_mean": 0.144956,
+      "clean_f1_diff_mean": 0.021671,
+      "ci_crosses_zero_per_seed": [
+        false,
+        false,
+        false
+      ],
+      "n_seeds_ci_crosses_zero": 0
+    },
+    {
+      "dataset": "nq",
+      "retriever": "bm25",
+      "seeds": [
+        13,
+        42,
+        2026
+      ],
+      "simplified_ASR": [
+        0.59,
+        0.63,
+        0.58
+      ],
+      "multistage_ASR": [
+        0.383333,
+        0.44,
+        0.433333
+      ],
+      "diff_ASR": [
+        0.206667,
+        0.19,
+        0.146667
+      ],
+      "diff_ASR_mean": 0.181111,
+      "diff_ASR_std": 0.030972,
+      "simplified_ASR_mean": 0.6,
+      "multistage_ASR_mean": 0.418889,
+      "clean_f1_simplified_mean": 0.115262,
+      "clean_f1_multistage_mean": 0.15142,
+      "clean_f1_diff_mean": -0.036158,
+      "ci_crosses_zero_per_seed": [
+        false,
+        false,
+        false
+      ],
+      "n_seeds_ci_crosses_zero": 0
+    }
+  ],
+  "summary": {
+    "n_combos": 4,
+    "n_combos_simplified_higher_asr": 4,
+    "n_combos_all3seed_ci_exclude_zero": 3,
+    "diff_mean_range_pp": [
+      2.2,
+      18.1
+    ],
+    "clean_f1_diff_signs": {
+      "hotpotqa/bge_dense": "-",
+      "hotpotqa/bm25": "-",
+      "nq/bge_dense": "+",
+      "nq/bm25": "-"
+    },
+    "finding": "简化管线无门控 ASR 在 4/4 组合高于多阶段管线；3/4 组合 3 种子 CI 均不跨零，HotpotQA/BGE 密集检索区间跨零不作稳定差异判断；Clean F1 差值非单向（3 负 1 正）。"
+  }
+}

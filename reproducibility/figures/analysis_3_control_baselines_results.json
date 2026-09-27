@@ -1,0 +1,215 @@
+{
+  "section": "5.4 + 5.5",
+  "figure": "fig_safegate_control (图4)",
+  "safegate_vs_random": {
+    "by_group": [
+      {
+        "dataset": "hotpotqa",
+        "retriever": "bge_dense",
+        "gate_position": "P_gen",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.451111,
+        "control_asr_drop_mean": 0.065556,
+        "multi_util_drop_mean": 0.060264,
+        "control_util_drop_mean": 0.016485,
+        "multi_ge_control_all_seeds": true,
+        "multi_higher_util_drop": true
+      },
+      {
+        "dataset": "hotpotqa",
+        "retriever": "bge_dense",
+        "gate_position": "P_ret",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.451111,
+        "control_asr_drop_mean": 0.031111,
+        "multi_util_drop_mean": 0.060264,
+        "control_util_drop_mean": 0.002601,
+        "multi_ge_control_all_seeds": true,
+        "multi_higher_util_drop": true
+      },
+      {
+        "dataset": "hotpotqa",
+        "retriever": "bm25",
+        "gate_position": "P_gen",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.466667,
+        "control_asr_drop_mean": 0.067778,
+        "multi_util_drop_mean": 0.051555,
+        "control_util_drop_mean": 0.017583,
+        "multi_ge_control_all_seeds": true,
+        "multi_higher_util_drop": true
+      },
+      {
+        "dataset": "hotpotqa",
+        "retriever": "bm25",
+        "gate_position": "P_ret",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.466667,
+        "control_asr_drop_mean": 0.022222,
+        "multi_util_drop_mean": 0.051555,
+        "control_util_drop_mean": 0.00645,
+        "multi_ge_control_all_seeds": true,
+        "multi_higher_util_drop": true
+      },
+      {
+        "dataset": "nq",
+        "retriever": "bge_dense",
+        "gate_position": "P_gen",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.033333,
+        "control_asr_drop_mean": 0.008889,
+        "multi_util_drop_mean": 0.012945,
+        "control_util_drop_mean": 0.004019,
+        "multi_ge_control_all_seeds": true,
+        "multi_higher_util_drop": true
+      },
+      {
+        "dataset": "nq",
+        "retriever": "bge_dense",
+        "gate_position": "P_ret",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.033333,
+        "control_asr_drop_mean": 0.001111,
+        "multi_util_drop_mean": 0.012945,
+        "control_util_drop_mean": 0.001536,
+        "multi_ge_control_all_seeds": true,
+        "multi_higher_util_drop": true
+      },
+      {
+        "dataset": "nq",
+        "retriever": "bm25",
+        "gate_position": "P_gen",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.041111,
+        "control_asr_drop_mean": 0.008889,
+        "multi_util_drop_mean": 0.013539,
+        "control_util_drop_mean": 0.005574,
+        "multi_ge_control_all_seeds": true,
+        "multi_higher_util_drop": true
+      },
+      {
+        "dataset": "nq",
+        "retriever": "bm25",
+        "gate_position": "P_ret",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.041111,
+        "control_asr_drop_mean": 0.015556,
+        "multi_util_drop_mean": 0.013539,
+        "control_util_drop_mean": 0.005116,
+        "multi_ge_control_all_seeds": true,
+        "multi_higher_util_drop": true
+      }
+    ],
+    "n_comparable_rows": 24,
+    "n_rows_multi_ge_random": 24,
+    "n_groups_multi_higher_utility_drop": 8,
+    "finding": "多信号在 24/24 可比行 ASR-Drop 不低于匹配随机阻断；但 Utility Drop 更高，不上升为通用检测能力。"
+  },
+  "multi_vs_single": {
+    "by_group": [
+      {
+        "dataset": "hotpotqa",
+        "retriever": "bge_dense",
+        "gate_position": "P_gen",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.451111,
+        "control_asr_drop_mean": 0.464444,
+        "multi_util_drop_mean": 0.060264,
+        "control_util_drop_mean": 0.052258,
+        "multi_ge_control_all_seeds": false,
+        "multi_higher_util_drop": true
+      },
+      {
+        "dataset": "hotpotqa",
+        "retriever": "bge_dense",
+        "gate_position": "P_ret",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.451111,
+        "control_asr_drop_mean": 0.464444,
+        "multi_util_drop_mean": 0.060264,
+        "control_util_drop_mean": 0.052258,
+        "multi_ge_control_all_seeds": false,
+        "multi_higher_util_drop": true
+      },
+      {
+        "dataset": "hotpotqa",
+        "retriever": "bm25",
+        "gate_position": "P_gen",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.466667,
+        "control_asr_drop_mean": 0.467778,
+        "multi_util_drop_mean": 0.051555,
+        "control_util_drop_mean": 0.038897,
+        "multi_ge_control_all_seeds": false,
+        "multi_higher_util_drop": true
+      },
+      {
+        "dataset": "hotpotqa",
+        "retriever": "bm25",
+        "gate_position": "P_ret",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.466667,
+        "control_asr_drop_mean": 0.467778,
+        "multi_util_drop_mean": 0.051555,
+        "control_util_drop_mean": 0.038897,
+        "multi_ge_control_all_seeds": false,
+        "multi_higher_util_drop": true
+      },
+      {
+        "dataset": "nq",
+        "retriever": "bge_dense",
+        "gate_position": "P_gen",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.033333,
+        "control_asr_drop_mean": 0.295556,
+        "multi_util_drop_mean": 0.012945,
+        "control_util_drop_mean": 0.015727,
+        "multi_ge_control_all_seeds": false,
+        "multi_higher_util_drop": false
+      },
+      {
+        "dataset": "nq",
+        "retriever": "bge_dense",
+        "gate_position": "P_ret",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.033333,
+        "control_asr_drop_mean": 0.295556,
+        "multi_util_drop_mean": 0.012945,
+        "control_util_drop_mean": 0.015727,
+        "multi_ge_control_all_seeds": false,
+        "multi_higher_util_drop": false
+      },
+      {
+        "dataset": "nq",
+        "retriever": "bm25",
+        "gate_position": "P_gen",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.041111,
+        "control_asr_drop_mean": 0.418889,
+        "multi_util_drop_mean": 0.013539,
+        "control_util_drop_mean": 0.010151,
+        "multi_ge_control_all_seeds": false,
+        "multi_higher_util_drop": true
+      },
+      {
+        "dataset": "nq",
+        "retriever": "bm25",
+        "gate_position": "P_ret",
+        "n_seeds": 3,
+        "multi_asr_drop_mean": 0.041111,
+        "control_asr_drop_mean": 0.418889,
+        "multi_util_drop_mean": 0.013539,
+        "control_util_drop_mean": 0.010151,
+        "multi_ge_control_all_seeds": false,
+        "multi_higher_util_drop": true
+      }
+    ],
+    "n_comparable_rows": 24,
+    "n_rows_multi_ge_single": 4,
+    "finding": "多信号仅在 4/24 可比行 ASR-Drop 不低于单信号（查询重叠）；未形成对单信号的一致优势（负结果，必须保留）。"
+  },
+  "summary": {
+    "safegate_beats_random_all": true,
+    "multi_not_consistently_better_than_single": true
+  }
+}

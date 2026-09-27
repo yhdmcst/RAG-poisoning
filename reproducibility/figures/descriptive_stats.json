@@ -1,0 +1,127 @@
+{
+  "data_source": "real_frozen_experiment (Phase5/5D/6.5)",
+  "simulation_used": false,
+  "experiment_matrix": {
+    "main_matrix_runs": 72,
+    "datasets": [
+      "hotpotqa",
+      "nq"
+    ],
+    "retrievers": [
+      "bge_dense",
+      "bm25"
+    ],
+    "attack_seeds": [
+      13,
+      42,
+      2026
+    ],
+    "run_variants": [
+      "clean_P_gen",
+      "clean_P_ret",
+      "clean_no_gate",
+      "poison_P_gen",
+      "poison_P_ret",
+      "poison_no_gate"
+    ],
+    "gate_positions": [
+      "P_gen",
+      "P_ret"
+    ],
+    "generator": [
+      "Qwen/Qwen3-8B"
+    ],
+    "reranker": [
+      "BAAI/bge-reranker-base"
+    ],
+    "num_eval_queries": 300,
+    "pipeline": [
+      "multi-stage"
+    ],
+    "latency_not_comparable": true,
+    "control_ablation_rows": {
+      "simplified_multistage": 12,
+      "single_signal_ablation": 24,
+      "random_gate_matched": 24
+    },
+    "formal_runs_total_reported": 192
+  },
+  "clean_f1_no_gate": {
+    "min": 0.13988,
+    "max": 0.15142,
+    "mean": 0.145569,
+    "by_combo": [
+      {
+        "dataset": "hotpotqa",
+        "retriever": "bge_dense",
+        "clean_f1_mean": 0.13988,
+        "n": 3
+      },
+      {
+        "dataset": "hotpotqa",
+        "retriever": "bm25",
+        "clean_f1_mean": 0.14602,
+        "n": 3
+      },
+      {
+        "dataset": "nq",
+        "retriever": "bge_dense",
+        "clean_f1_mean": 0.144956,
+        "n": 3
+      },
+      {
+        "dataset": "nq",
+        "retriever": "bm25",
+        "clean_f1_mean": 0.15142,
+        "n": 3
+      }
+    ],
+    "note": "无门控 Clean F1 绝对值偏低，仅作协议内相对效用比较基线（大纲论点8/限制）。"
+  },
+  "poison_asr_no_gate": {
+    "min": 0.266667,
+    "max": 0.48,
+    "mean": 0.4125,
+    "n": 12
+  },
+  "protocol_config": {
+    "chunking": "C128-S32",
+    "chunk_size": 128,
+    "stride": 32,
+    "top_m": 50,
+    "K_gen": 5,
+    "reranker": "BAAI/bge-reranker-base",
+    "generator": "Qwen/Qwen3-8B",
+    "decoding": {
+      "temperature": 0,
+      "do_sample": false,
+      "top_p": 1.0,
+      "max_new_tokens": 64
+    },
+    "attack": "targeted_template_poison",
+    "poison_budget": 5,
+    "bm25": {
+      "k1": 0.9,
+      "b": 0.4,
+      "note": "仓库内固定实现，非标准 BM25"
+    },
+    "gate_signals": [
+      "query_similarity_anomaly",
+      "query_overlap_anomaly",
+      "corpus_distance_anomaly",
+      "surface_repetition_anomaly"
+    ],
+    "gate_fusion": "unweighted_mean_relu_zscores",
+    "alpha_block": 0.05,
+    "alpha_down": 0.1,
+    "gate_encoder": "BAAI/bge-base-en-v1.5",
+    "calibration_queries": 200,
+    "eval_queries": 300,
+    "split_seed": 20260905,
+    "attack_seeds": [
+      13,
+      42,
+      2026
+    ]
+  }
+}

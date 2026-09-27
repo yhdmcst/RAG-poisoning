@@ -1,0 +1,23 @@
+{
+  "nq": {
+    "source": "BEIR NQ raw passage corpus",
+    "corpus_documents": 2681468,
+    "clean_chunks": 2886727,
+    "corpus_sha256": "f7e3588dd416772c9830baf67e827d49678f8d5a6ccf6e101b9ce990cc7b208c",
+    "chunk_sha256": "59a6a07d087356e3b1f2d72e93af34410d0a917ea5623b266c3cf86c5a2557ea"
+  },
+  "hotpotqa": {
+    "source": "HotpotQA context paragraphs",
+    "corpus_documents": 24908,
+    "clean_chunks": 29930,
+    "corpus_sha256": "ffd86462c3f6de1b4619933f55e74e0238537f4ad0f0defc4ad1f76cb7197579",
+    "chunk_sha256": "6deb7d12afead670e0980f7afcd6eab43f5bfee9637688676858fd804c9882bc"
+  },
+  "split": {
+    "split_seed": 20260905,
+    "calibration_queries_per_dataset": 200,
+    "evaluation_queries_per_dataset": 300,
+    "overlap": 0
+  },
+  "note": "Local absolute paths were removed from this public manifest."
+}

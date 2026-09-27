@@ -1,0 +1,69 @@
+﻿[
+    {
+        "Asset":  "NQ corpus",
+        "Exists":  true,
+        "Bytes":  1503763328,
+        "Expected":  "f7e3588dd416772c9830baf67e827d49678f8d5a6ccf6e101b9ce990cc7b208c",
+        "Actual":  "f7e3588dd416772c9830baf67e827d49678f8d5a6ccf6e101b9ce990cc7b208c",
+        "Match":  true
+    },
+    {
+        "Asset":  "NQ queries",
+        "Exists":  true,
+        "Bytes":  330995,
+        "Expected":  "72f08f0cd333a47e393dac61cf1e56d4fb41eabf1d6ad5ca99f40250b0b491c8",
+        "Actual":  "72f08f0cd333a47e393dac61cf1e56d4fb41eabf1d6ad5ca99f40250b0b491c8",
+        "Match":  true
+    },
+    {
+        "Asset":  "NQ qrels",
+        "Exists":  true,
+        "Bytes":  87138,
+        "Expected":  "6df0cd2cbbe88504b64c68f21e946a759b62c4d864225720cec256f0196e2210",
+        "Actual":  "6df0cd2cbbe88504b64c68f21e946a759b62c4d864225720cec256f0196e2210",
+        "Match":  true
+    },
+    {
+        "Asset":  "NQ chunks",
+        "Exists":  true,
+        "Bytes":  536946180,
+        "DatasetManifestExpected":  "59a6a07d087356e3b1f2d72e93af34410d0a917ea5623b266c3cf86c5a2557ea",
+        "StrictManifestExpected":  "08fea65c7873cd2ed58987aca1ea4a9ac2711ad49374a1dce98bc17cba88cfb6",
+        "Actual":  "08fea65c7873cd2ed58987aca1ea4a9ac2711ad49374a1dce98bc17cba88cfb6",
+        "MatchDatasetManifest":  false,
+        "MatchStrictManifest":  true,
+        "Interpretation":  "Actual Phase 5 NQ chunks match the strict chunk manifest and Phase 5 corpus manifest; dataset_manifest.json contains stale pre-rerun metadata."
+    },
+    {
+        "Asset":  "Hotpot corpus",
+        "Exists":  true,
+        "Bytes":  16642176,
+        "Expected":  "ffd86462c3f6de1b4619933f55e74e0238537f4ad0f0defc4ad1f76cb7197579",
+        "Actual":  "ffd86462c3f6de1b4619933f55e74e0238537f4ad0f0defc4ad1f76cb7197579",
+        "Match":  true
+    },
+    {
+        "Asset":  "Hotpot queries",
+        "Exists":  true,
+        "Bytes":  661974,
+        "Expected":  "2c08f186c19b41eea5d8c4303b98bb7aec2506842b7352da8e8ee371befbace5",
+        "Actual":  "2c08f186c19b41eea5d8c4303b98bb7aec2506842b7352da8e8ee371befbace5",
+        "Match":  true
+    },
+    {
+        "Asset":  "Hotpot qrels",
+        "Exists":  true,
+        "Bytes":  214630,
+        "Expected":  "b4dd78eb7e52c76056528c3a98d641915ab38b4730ea29d5079fc9dbfa062bd8",
+        "Actual":  "b4dd78eb7e52c76056528c3a98d641915ab38b4730ea29d5079fc9dbfa062bd8",
+        "Match":  true
+    },
+    {
+        "Asset":  "Hotpot chunks",
+        "Exists":  true,
+        "Bytes":  6089177,
+        "Expected":  "6deb7d12afead670e0980f7afcd6eab43f5bfee9637688676858fd804c9882bc",
+        "Actual":  "6deb7d12afead670e0980f7afcd6eab43f5bfee9637688676858fd804c9882bc",
+        "Match":  true
+    }
+]

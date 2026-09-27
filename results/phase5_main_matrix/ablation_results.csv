@@ -1,0 +1,2 @@
+status,reason,single_signal_control
+not_run_main_matrix_first,Latest instruction requires completing the formal main matrix before considering control/ablation matrices.,pending_commander_decision

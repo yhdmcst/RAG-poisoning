@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated paper."
+title: "Gate-Position Sensitivity Analysis in Multi-Stage RAG Poisoning Evaluation"
+type: software
+authors:
+  - family-names: Chen
+    given-names: Guanyu
+  - family-names: Zhang
+    given-names: Zijian
+  - family-names: Liu
+    given-names: Dong
+  - family-names: Liu
+    given-names: Shouqiang
+version: 1.0.0
+date-released: 2026-09-27
+

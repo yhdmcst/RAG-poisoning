@@ -1,0 +1,13 @@
+﻿claim_family,dataset,retriever,attack_seed,n,mean_difference,ci95_low,ci95_high,bootstrap_repetitions
+simplified_minus_multistage_ASR,nq,bm25,13,300,0.20666666666666667,0.15666666666666668,0.25666666666666665,5000
+simplified_minus_multistage_ASR,nq,bm25,42,300,0.19,0.14333333333333334,0.23666666666666666,5000
+simplified_minus_multistage_ASR,nq,bm25,2026,300,0.14666666666666667,0.1,0.19333333333333333,5000
+simplified_minus_multistage_ASR,nq,bge_dense,13,300,0.11,0.06333333333333334,0.15666666666666668,5000
+simplified_minus_multistage_ASR,nq,bge_dense,42,300,0.11333333333333333,0.06666666666666667,0.16333333333333333,5000
+simplified_minus_multistage_ASR,nq,bge_dense,2026,300,0.11,0.06,0.16,5000
+simplified_minus_multistage_ASR,hotpotqa,bm25,13,300,0.16333333333333333,0.11333333333333333,0.21333333333333335,5000
+simplified_minus_multistage_ASR,hotpotqa,bm25,42,300,0.16,0.11,0.21,5000
+simplified_minus_multistage_ASR,hotpotqa,bm25,2026,300,0.14333333333333334,0.09666666666666666,0.19,5000
+simplified_minus_multistage_ASR,hotpotqa,bge_dense,13,300,0.03333333333333333,-0.013333333333333334,0.08,5000
+simplified_minus_multistage_ASR,hotpotqa,bge_dense,42,300,0.03666666666666667,-0.006666666666666667,0.08,5000
+simplified_minus_multistage_ASR,hotpotqa,bge_dense,2026,300,-0.0033333333333333335,-0.043333333333333335,0.03666666666666667,5000

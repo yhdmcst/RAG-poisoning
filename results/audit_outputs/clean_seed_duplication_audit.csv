@@ -1,0 +1,13 @@
+﻿dataset,retriever,run_variant,seed_rows,queries_compared,all_contexts_and_answers_identical_across_seeds
+hotpotqa,bge_dense,clean_P_gen,3,300,true
+hotpotqa,bge_dense,clean_P_ret,3,300,true
+hotpotqa,bge_dense,clean_no_gate,3,300,true
+hotpotqa,bm25,clean_P_gen,3,300,true
+hotpotqa,bm25,clean_P_ret,3,300,true
+hotpotqa,bm25,clean_no_gate,3,300,true
+nq,bge_dense,clean_P_gen,3,300,true
+nq,bge_dense,clean_P_ret,3,300,true
+nq,bge_dense,clean_no_gate,3,300,true
+nq,bm25,clean_P_gen,3,300,true
+nq,bm25,clean_P_ret,3,300,true
+nq,bm25,clean_no_gate,3,300,true
